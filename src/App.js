@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import UserList from './redux/containers/user-list'
+import selectuser from './redux/actions/index'
+import UserDetail from './redux/containers/user-detail'
+import userDetail from './redux/containers/user-detail';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h2>UserName :</h2>
+        <UserList/>
+        <hr/>
+        <h2>User Detail:</h2>
+        <UserDetail></UserDetail>
       </div>
     );
   }
